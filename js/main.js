@@ -13,7 +13,7 @@
 
 // const arrayProductos = [];
 
-// arrayProductos.push (new Producto (" Cafe Colombia", 1550, 20));
+// arrayProductos.push (new Producto ("Cafe Colombia", 1550, 20));
 // arrayProductos.push (new Producto ("Cafe Etiopia", 1650, 10));
 // arrayProductos.push (new Producto ("Cafe Kenia", 1600, 10));
 // arrayProductos.push (new Producto ("Cafe Nicaragua", 1500, 10));
@@ -128,13 +128,13 @@
 
 
 class Producto {
-    constructor(nombre, precio, cantidad) {
+    constructor(nombre, precio, stock) {
         this.nombre = nombre,
         this.precio = Number(precio),
-        this.cantidad = cantidad
+        this.stock = stock
     }
-    actualizarCantidad(stock) {
-        this.cantidad = this.cantidad - stock
+    actualizarStock(cantidad) {
+        this.stock = this.stock - cantidad
     }
 }
 
@@ -144,8 +144,7 @@ arrayProductos.push(new Producto("Cafe Colombia", 1550, 20));
 arrayProductos.push(new Producto("Cafe Etiopia", 1650, 10));
 arrayProductos.push(new Producto("Cafe Kenia", 1600, 10));
 
-
-
+// Funciones para ordenar una lista
 const ordenarMenorMayor = () => {
     arrayProductos.sort( (a,b) => a.precio - b.precio);
     mostrarListaOrdenada();
@@ -163,25 +162,26 @@ const mostrarListaOrdenada = () => {
 };
 
 
-//COMPRA
 
 let total = 0;
 
-const agregarProducto = () => {
+const agregarProductoCarrito = () => {
     let otroProducto;
     let producto = "";
     let cantidad = 0;
     let precio = 0;
+    let bienvenida;
 
     do {
-        producto = prompt("¿En donde te gustaria sentirte? ¿Colombia, Etiopia o Kenia?");
-        cantidad = parseInt(prompt("¿Cuantos desea comprar?"));
+        bienvenida = prompt ("Bienvenidos a PUERTO BLEST. VIVI TU PROPIA EXPERIENCIA SENSORIAL!");
+        producto = prompt("Que sabor te gustaria sentir? Colombia, Etiopia o Kenia?");
+        cantidad = parseInt(prompt("Que cantidad desea agregar?"));
 
         switch(producto) {
             case arrayProductos[0].nombre:
-                arrayProductos[0].actualizarCantidad(stock);
-                if (arrayProductos[0].stock < 0 || isNaN(stock)) {
-                    alert("Lo sentimos! Este producto se agoto!");
+                arrayProductos[0].actualizarStock(cantidad);
+                if (arrayProductos[0].stock < 0 || isNaN(cantidad)) {
+                    alert("Lo sentimos. Este producto se agoto!");
                     precio = 0;
                     cantidad = 0;
                 } else {
@@ -189,9 +189,9 @@ const agregarProducto = () => {
                 }
                 break;
             case arrayProductos[1].nombre:
-                arrayProductos[1].actualizarCantidad(stock);
-                if (arrayProductos[1].stock < 0 || isNaN(stock)) {
-                    alert("Lo sentimos! Este producto se agoto!");
+                arrayProductos[1].actualizarStock(cantidad);
+                if (arrayProductos[1].stock < 0 || isNaN(cantidad)) {
+                    alert("Lo sentimos. Este producto se agoto!");
                     precio = 0;
                     cantidad = 0;
                 } else {
@@ -199,9 +199,19 @@ const agregarProducto = () => {
                 }
                 break;
             case arrayProductos[2].nombre:
-                arrayProductos[2].actualizarCantidad(stock);
-                if (arrayProductos[2].stock < 0 || isNaN(stock)) {
-                    alert("Lo sentimos! Este producto se agoto!");
+                arrayProductos[2].actualizarStock(cantidad);
+                if (arrayProductos[2].stock < 0 || isNaN(cantidad)) {
+                    alert("Lo sentimos. Este producto se agoto!");
+                    precio = 0;
+                    cantidad = 0;
+                } else {
+                    precio = arrayProductos[2].precio;
+                }
+                break;
+            case arrayProductos[2].nombre:
+                arrayProductos[2].actualizarStock(cantidad);
+                if (arrayProductos[2].stock < 0 || isNaN(cantidad)) {
+                    alert("Lo sentimos. Este producto se agoto!");
                     precio = 0;
                     cantidad = 0;
                 } else {
@@ -209,85 +219,58 @@ const agregarProducto = () => {
                 }
                 break;
             default:
-                alert("La informacion ingresada no es valida.");
+                alert("El campo ingresado no es valido.");
                 precio = 0;
                 cantidad = 0;
         }
 
         total = total + precio * cantidad;
-        otroProducto = confirm("¿Desea agregar algun otro producto?");
+        otroProducto = confirm("Desea agregar algun otro producto?");
     } while (otroProducto);
 };
 
 
 
-const aplicarDescuento = (total) => {
-    if ( total >= 6000 ) {
-        total = total * 0.85;
-        alert("15% de descuento !!!");
+const obtenerDescuento = (total) => {
+    if ( total >= 6500 ) {
+        total = total * 0.8;
+        alert(" TENES UN 15% DE DESCUENTO EN TU COMPRA");
     }
     return total;
 };
 
 
 
-const costoDeEnvio= (total) => {
-    let confirmacion = confirm("¿Lo enviamos a tu domicilio?");
+const precioDeEnvio = (total) => {
+    let confirmacion = confirm("Lo enviamos a tu domicilio?");
     if ( confirmacion && total >= 3000 ) {
-        alert("ENVIOS GRATIS. El total de tu compra es "+total);
+        alert("NEVIOS GRATIS, el total de tu compra es de "+total);
     } else if ( confirmacion && total < 3000 && total != 0 ) {
-        total = total + 690;
+        total = total + 680;
     } else {
-        alert("El total de tu compra es de"+total);
+        alert("El total de tu compra es de "+total);
     }
     return total;
 };
 
 
-let cuotas = 0;
-const obtenerCantidadDeCuotas = () => {
-    let confirmacion = confirm("¿Desea pagar en cuotas?");
-    if (confirmacion) {
-        cuotas = parseInt(prompt("¿Cuantas cuotas"));
-        if ( cuotas == 0 ) {
-            cuotas = 1;
-        } else if ( isNaN(cuotas) ) {
-            obtenerCantidadDeCuotas();
-        }
-    } else {
-        cuotas = 1;
-    }
-    return cuotas;
-};
 
-
-const totalCompra = (total, cuotas) => {
+const obtenerTotal = (total, envio) => {
     console.log(total);
-    console.log(cuotas);
-    total = total + cuotas;
-    let importeCuota = total / cuotas;
-    alert("El total a pagar es $ "+total+" en "+cuotas+" cuotas de $ "+Math.ceil(importeCuota));
+    console.log(envio)
+    total = total + envio;
+    alert("EL TOTAL DE SU COMPRA ES "+total);
 };
-
-
-const realizarCompra = () => {
-    if (confirm ("Ordenamos la lista de menor a mayor?")) {
-        ordenarMenorAMayor ();
-    } else {
-        ordenarMayorAMenor ();
-    }
-
-}
 
 
 const comprarProductos = () => {
-    if ( confirm("Queres ordenar la lista de productos del más barato al más caro?")) {
+    if ( confirm("Queres ver los productos de menor a mayor precio?")) {
         ordenarMenorMayor();
     } else {
         ordenarMayorMenor();
     }
     agregarProductoCarrito();
-    obtenerTotal(obtenerPrecioDeEnvio(aplicarDescuento(total), obtenerCantidadDeCuotas()));
+    obtenerTotal(precioDeEnvio(obtenerDescuento(total)));
 };
 
 comprarProductos();
