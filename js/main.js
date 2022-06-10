@@ -143,15 +143,16 @@ const arrayProductos = [];
 arrayProductos.push(new Producto("Cafe Colombia", 1550, 20));
 arrayProductos.push(new Producto("Cafe Etiopia", 1650, 10));
 arrayProductos.push(new Producto("Cafe Kenia", 1600, 10));
+arrayProductos.push(new Producto("Cafe Nicaragua", 1500, 10));
 
-// Funciones para ordenar una lista
+
 const ordenarMenorMayor = () => {
-    arrayProductos.sort( (a,b) => a.precio - b.precio);
+    arrayProductos.sort( (a,b,c) => a.precio - b.precio - c.precio);
     mostrarListaOrdenada();
 };
 
 const ordenarMayorMenor = () => {
-    arrayProductos.sort( (a,b) => b.precio - a.precio);
+    arrayProductos.sort( (a,b,c) => c.precio - b.precio - a.precio);
     mostrarListaOrdenada();
 };
 

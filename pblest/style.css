@@ -1,0 +1,50 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Homemade+Apple&display=swap');
+
+/* VARIABLES */
+:root {
+    color: black;
+    --font-primary:'Dosis', sans-serif;
+    --font-secondary:'Amatic SC', cursive;
+    --font-tertiary: 'Homemade Apple', cursive;
+}
+
+/* RESETS */
+*,
+*::after
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HELPERS */
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* HEADER */
+.envio {
+    background-color: black;
+    padding: 15px;
+    color: white;
+    font-family: var(--font-secondary);
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: black;
+    color: white;
+    font-family: var(--font-secondary);
+    font-size: 20px;
+}
