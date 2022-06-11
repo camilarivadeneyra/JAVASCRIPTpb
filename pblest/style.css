@@ -1,12 +1,12 @@
 /* IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dosis:wght@200&family=Poiret+One&display=swap');
 
 /* VARIABLES */
 :root {
     color: black;
-    --font-primary:'Dosis', sans-serif;
-    --font-secondary:'Amatic SC', cursive;
-    --font-tertiary: 'Homemade Apple', cursive;
+    --font-primary: 'Poiret One', cursive;
+    --font-secondary: 'Dosis', sans-serif;
+    --font-tertiary: 'Amatic SC', cursive;
 }
 
 /* RESETS */
@@ -18,33 +18,57 @@
     box-sizing: border-box;
 }
 
-/* HELPERS */
-.flex-row {
-    display: flex;
+/* GLOBALS */
+header {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    align-content: space-between;
 }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
 }
 
 
 /* HEADER */
-.envio {
+.promo {
     background-color: black;
     padding: 15px;
     color: white;
-    font-family: var(--font-secondary);
+    font-family: var(--font-tertiary);
     font-weight: lighter;
     font-size: 22px;
 }
 
-
+.search {
+    width: 20%;
+    height: 30px;
+    padding-left: 5px;
+    background-color: #d7d7d7;
+    text-align: left;
+    font-size: 20px;
+    font-family: var(--font-tertiary);
+   
+}
 
 /* FOOTER */
 footer {
     background-color: black;
     color: white;
-    font-family: var(--font-secondary);
-    font-size: 20px;
+    font-family: var(--font-tertiary);
+    font-size: 22px;
+    padding: 6px;
+    height: 8vh;
 }
