@@ -97,6 +97,10 @@ h2 {
     font-family: var(--font-primary);
 }
 
+.cart {
+    font-family: var(--font-tertiary);
+    font-size: 30px;
+}
 
 
 
