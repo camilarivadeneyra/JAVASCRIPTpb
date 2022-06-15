@@ -154,7 +154,6 @@
 
 
 const nombre = document.getElementById("firstName");
-const apellido = document.getElementById("lastName");
 const email = document.getElementById("email");
 const monto = document.getElementById("amount");
 const cuotas = document.getElementById("fees");
@@ -171,21 +170,22 @@ const tasa = 0.01; // 1%
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  obtenerCuotaPrestamo();
+  obtenerCuotaCompra();
 
 });
 
-const obtenerCuotaPrestamo = () => {
-  const cuotaPrestamo = tasa * monto.value / (1 - (1+tasa) ** - cuotas.value);
-  obtenerTotal(cuotaPrestamo);
+
+const obtenerCuotaCompra = () => {
+  const cuotaCompra = tasa * monto.value / (1 - (1+tasa) ** - cuotas.value);
+  obtenerTotal(cuotaCompra);
 };
 
-const obtenerTotal = (cuotaPrestamo) => {
-  const total = Math.ceil(cuotaPrestamo) * cuotas.value;
-  pintarPrestamo(total);
+const obtenerTotal = (cuotaCompra) => {
+  const total = Math.ceil(cuotaCompra) * cuotas.value;
+  finalizarCompra(total);
 }
 
-const pintarPrestamo = (total) => {
+const finalizarCompra = (total) => {
   montoFinal.textContent = monto.value;
   cuotasFinales.textContent = cuotas.value;
   intereses.textContent = total - monto.value;
