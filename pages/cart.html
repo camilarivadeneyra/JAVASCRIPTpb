@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!--LINK ICONOS-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,-25" />
 <script src="https://kit.fontawesome.com/dd950ff17a.js" crossorigin="anonymous"></script>
@@ -15,15 +16,15 @@
 </head>
 <body>
     <main>
-        <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="../pblest/images/PuertoBlest.png" alt="" width="200" height="200">
-            <h2 class="cart">Finaliza tu compra</h2>
-            <p class="cart">EN SIMPLES PASOS.</p>
+        <div>
+            <img src="../pblest/images/PuertoBlest.png" alt="logo" width="150" height="150" class="logocart">
+            <h2>FINALIZA TU COMPRA EN SIMPLES PASOS.</h2>
+            <p>CALCULA TUS CUOTAS</p>
         </div>
 
-        <div class="general">
+        <div>
             <div>
-                <h3><span>TU COMPRA</span></h3>
+                <h4><span>CUOTAS.</span></h4>
                 <ul>
                     <li>
                         <div>
@@ -32,86 +33,75 @@
                         </div>
                         <span>$0</span>
                     </li>
-
                     <li>
                         <div>
                             <h6>CUOTAS</h6>
-                            <small>Cantidad de Cuotas.</small>
+                            <small>Cantidad de cuotas.</small>
                         </div>
                         <span>0</span>
                     </li>
-
                     <li>
                         <div>
-                            <h6>INTERESES</h6>
-                            <small>1 pago sin interes..</small>
+                            <h6>Intereses</h6>
                         </div>
                         <span>$0</span>
                     </li>
-
                     <li>
-                        <span>Valor de las Cuotas</span>
+                        <span>INTERESES</span>
                         <strong>$0</strong>
                     </li>
                 </ul>
             </div>
-
             <div>
                 <h4>INGRESE SUS DATOS.</h4>
-                <form class="needs-validation" id="form" novalidate>
+                <form novalidate>
                     <div>
-                        <div>
-                            <label for="firstName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                                Ingrese un nombre valido.
-                            </div>
-                        </div>
-                            <label for="lastName" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                            <div class="invalid-feedback">
-                                Ingrese un apellido valido.
-                            </div>
-                        </div>
+                        <label for="firstName">NOMBRE</label>
+                        <input type="text" id="firstName" placeholder="" value="" required>
+                        <div>Ingrese un nombre valido.</div>
+                    </div>
 
-                        <div class="col-12">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="E-mail" placeholder="you@example.com">
-                            <div class="invalid-feedback">
-                                Ingrese un Correo Electronico valido para continuar.
-                            </div>
-                        </div>
+                    <div>
+                        <label for="lastName">APELLIDO</label>
+                        <input type="text" id="lastName" placeholder="" value="" required>
+                        <div>Ingrese un apellido valido.</div>
+                    </div>
 
-                        <div class="col-12">
-                            <label for="amount" class="form-label">Importe a pagar</label>
-                            <input type="number" class="form-control" id="amount" placeholder="100000" required>
-                            <div class="invalid-feedback">
-                                Por favor, ingrese la cantidad.
-                            </div>
-                        </div>
+                    <div>
+                        <label for="email">E-mail <span class="text-muted">(Optional)</span></label>
+                        <input type="email" id="email" placeholder="nombre@email.com">
+                        <div>Por favor ingrese un mail valido.</div>
+                    </div>
 
-                        <div class="col-12">
-                            <label for="fees" class="form-label">¿Cuantas cuotas?</label>
-                            <input type="number" class="form-control" id="fees" placeholder="12" required>
-                            <div class="invalid-feedback">
-                                Por favor, ingrese la cantidad.
-                            </div>
-                        </div>
+                    <div>
+                        <label for="amount">Cual es su importe?</label>
+                        <input type="number" id="amount" placeholder="80000" required>
+                        <div>Por favor ingrese un monto.</div>
+                    </div>
 
-                        <hr>
+                    <div>
+                        <label for="fees">Cuantas cuotas desea?</label>
+                        <input type="number" id="fees" placeholder="6" required>
+                        <div>Por favor ingrese un numero.</div>
+                    </div>
 
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="save-info">
-                            <label class="form-check-label" for="save-info">Recordar mi informacion.</label>
-                        </div>
+                    <hr>
 
-                        <hr>
+                    <div>
+                        <input type="checkbox" d="save-info">
+                        <label for="save-info">Guarde sus datos para proximas visitas.</label>
+                    </div>
 
-                        <input class="w-100 btn btn-primary btn-lg" id="simulate" type="submit" value="Generar">
+                    <hr>
+
+                    <input type="submit" value="Generar." id="simulate">
                 </form>
-            </div>  
-        </div>           
+            </div>
+        </div>
+
     </main>
+   
+
 <script src="../js/main.js"></script>   
 </body>
 </html>

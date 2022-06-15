@@ -146,3 +146,116 @@
 // };
 
 // comprarProductos();
+
+
+
+
+
+
+
+const nombre = document.getElementById("firstName");
+const apellido = document.getElementById("lastName");
+const email = document.getElementById("email");
+const monto = document.getElementById("amount");
+const cuotas = document.getElementById("fees");
+
+const formulario = document.getElementById("form");
+
+const montoFinal = document.getElementById("finalAmount");
+const cuotasFinales = document.getElementById("finalFees");
+const intereses = document.getElementById("interests");
+const totalADevolver = document.getElementById("totalAmount");
+
+const tasa = 0.01; // 1%
+
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  obtenerCuotaPrestamo();
+
+});
+
+const obtenerCuotaPrestamo = () => {
+  const cuotaPrestamo = tasa * monto.value / (1 - (1+tasa) ** - cuotas.value);
+  obtenerTotal(cuotaPrestamo);
+};
+
+const obtenerTotal = (cuotaPrestamo) => {
+  const total = Math.ceil(cuotaPrestamo) * cuotas.value;
+  pintarPrestamo(total);
+}
+
+const pintarPrestamo = (total) => {
+  montoFinal.textContent = monto.value;
+  cuotasFinales.textContent = cuotas.value;
+  intereses.textContent = total - monto.value;
+  totalADevolver.textContent = total;
+};
+
+
+
+(() => {
+  'use strict'
+
+  const forms = document.querySelectorAll('.needs-validation')
+
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+
+
