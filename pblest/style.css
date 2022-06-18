@@ -104,3 +104,68 @@ h4 {
     font-size: 18px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title {
+    font-family: var(--font-tertiary);
+    font-size: 22px;
+}
+
+p {
+    font-family: var(--font-secondary);
+    font-weight: lighter;
+    font-size: 18.5px;
+}
+
+.title-products {
+    font-family: var(--font-primary);
+    font-weight: lighter;
+    font-size: 22px;
+    padding-left: 50px;
+}
+
+.about-us {
+    font-family: var(--font-secondary);
+    font-size: 18.5px;
+}
+
+.name {
+    font-family: var(--font-tertiary);
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.name1 {
+    font-family: var(--font-tertiary);
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.name2 {
+    font-family: var(--font-secondary);
+    font-weight: lighter;
+    font-size: 18.5px;
+}
+
+.product-card {
+    border: 2px solid;
+    border-color: #d7d7d7;
+    width: 400px;
+    height: 450px;
+}
+
+
