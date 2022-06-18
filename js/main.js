@@ -261,3 +261,7 @@ const finalizarCompra = (total) => {
 
 
 
+function myFunction() {
+  alert("Te contamos nuestra historia !");
+}
+
