@@ -62,7 +62,6 @@ function mostrarProductos(array){
 }
 
 
-
 const carritoAbrir = document.getElementById('boton-carrito');
 const carritoCerrar = document.getElementById('carritoCerrar');
 
@@ -83,7 +82,7 @@ contenedorModal.addEventListener('click', ()=>{
 })
 
 function agregarAlCarrito(id) {
-   let productoAgregar = stockProductos.find(item => item.id === id)
+let productoAgregar = stockProductos.find(item => item.id === id)
     console.log(productoAgregar)
     carritoDeCompras.push(productoAgregar)
     mostrarCarrito(productoAgregar)
@@ -115,25 +114,20 @@ function mostrarCarrito(productoAgregar) {
 
 
 function  actualizarCarrito (){
-   contadorCarrito.innerText = carritoDeCompras.length
-   precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + el.precio, 0)
-                                                               
+    contadorCarrito.innerText = carritoDeCompras.length
+    precioTotal.innerText = carritoDeCompras.reduce((acc,el)=> acc + el.precio, 0)                                                             
 }
 
 
 function recuperar() {
-
-    let recuperarLS = JSON.parse(localStorage.getItem('carrito'))
+let recuperarLS = JSON.parse(localStorage.getItem('carrito'))
     if(recuperarLS){
-       for (const elemento of recuperarLS) {
-        mostrarCarrito(elemento)
-        carritoDeCompras.push(elemento)
-        actualizarCarrito()
+        for (const elemento of recuperarLS) {
+            mostrarCarrito(elemento)
+            carritoDeCompras.push(elemento)
+            actualizarCarrito()
     } 
     }
-    
-
 }
-
 
 recuperar()
