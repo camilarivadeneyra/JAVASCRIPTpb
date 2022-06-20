@@ -161,5 +161,23 @@ p {
     font-size: 18.5px;
 }
 
+#boton-carrito {
+    border: none;
+    color: black;
+    font-size: 22px;
+    background-color: white;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+
+#boton-carrito:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black
+}
+
+#boton-carrito:focus {
+    outline: none;
+}
 
 
