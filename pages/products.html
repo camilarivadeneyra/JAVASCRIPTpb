@@ -14,6 +14,7 @@
 
     <title>PUERTO BLEST / tostadores de café.</title>
 </head>
+
 <body>
     <h5 class="info">ENVIOS GRATIS A TODO EL PAIS EN COMPRA MAYORES A $5000</h5>
     <header>
@@ -22,7 +23,7 @@
                 <picture><a href="../index.html"><img src="../pblest/images/PuertoBlest.png" alt="logo"  width="200px" height="200px"></a></picture>
             </div>
             <div>
-                <input class="search" type="search" name="Busqueda" placeholder="BUSCAR PRODUCTOS">
+                <input id="search" class="search" type="search" name="Busqueda" placeholder="BUSCAR PRODUCTOS">
                 <span class="material-symbols-outlined">search</span>
             </div>
             <div class="products">
@@ -33,92 +34,122 @@
         </nav>
     </header>
 
-    <main grid-container>
-        <h3 class="title-products">VIVI TU PROPIA EXPERIENCIA SENSORIAL.</h3>
-        <br>
-        <div class="product-card">
+    <main id="contenedor-productos">
+        <div class="grid-container">
+            <h3 class="title-products">VIVI TU PROPIA EXPERIENCIA SENSORIAL.</h3>
+            <br>
+            <br>
+            <div class="seleccion">
+                <select id="selecCafe">
+                    <option value="all">Todos</option>
+                    <option value="L">$2300 - $2500</option>
+                    <option value="M">$2000 - $2200</option>
+                    <option value="S">$1600 - $1800</option>
+                </select>
+            </div>
+            <br>
+            <div class="modal-contenedor">
+                <div class="modal-carrito">
+                    <h3>Carrito</h3>
+                    <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                    <div id="carrito-contenedor">
+                         <!-- <div class="productoEnCarrito">
+                            <p>Buzo 1</p>
+                            <p>Precio: $1200</p>
+                            <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                        </div>   -->
+                    </div>
+                    <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                    <div id="terminar" style="display: flex; justify-content: flex-end;"></div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="product-card">
             <div class="product-info">
                 <img src="../pblest/images/BLEND.jpg" alt="blend" width="300px" height="300px">
                 <h4 class="name">ALTURA 1 - Blend</h4>
                 <h4 class="name1">Blend de la casa</h4>
             </div>
-           
-       
-        </div>
-        <br>
-        <div class="product-card">
-            <img src="../pblest/images/COLOMBIAsl.jpg" alt="csl" width="300px" height="300px">
-            <h4 class="name">COLOMBIA, San Lorenzo</h4>
-            <h4 class="name1">Gesha lavado </h4>
+            <br>
+            <div class="product-card">
+                <img src="../pblest/images/COLOMBIAsl.jpg" alt="csl" width="300px" height="300px">
+                <h4 class="name">COLOMBIA, San Lorenzo</h4>
+                <h4 class="name1">Gesha lavado </h4>
+            </div>
+            <br>
+            <div class="product-card">
+                <img src="../pblest/images/COLOMBIAca.jpg" alt="cca" width="300px" height="300px">
+                <h4 class="name">COLOMBIA, Cartago</h4>
+                <h4 class="name1">Bourbon rosado</h4>
+            </div>
+            <br>
+            <div class="product-card">
+                <img src="../pblest/images/ETIOPIAsh.jpg" alt="esh" width="300px" height="300px">
+                <h4 class="name">ETIOPIA, Shara</h4>
+                <h4 class="name1">Variedades reliquia lavado</h4>   
+            </div>
+            <br>
+            <div class="product-card">
+                <img src="../pblest/images/ETIOPIAur.jpg" alt="eur" width="300px" height="300px">
+                <h4 class="name">ETIOPIA, Uraga</h4>
+                <h4 class="name1">Adado lavado</h4> 
+            </div>
+            <br>
+            <div class="product-card">
+                <img src="../pblest/images/GUATEMALAhu.jpg" alt="gh" width="300px" height="300px">
+                <h4 class="name">GUATEMALA, huehuetenango</h4>
+                <h4 class="name1">Bourbon honey</h4>
+            </div>
+            <br>
+            <div class="product-card">
+                <img src="../pblest/images/KENIAki.jpg" alt="kk" width="300px" height="300px">
+                <h4 class="name">KENIA, Kirinyaga</h4>
+                <h4 class="name1">Lavado</h4>   
+            </div>
+            <br>
+            <div class="product-card">
+                <img src="../pblest/images/NICARAGUAji.jpg" alt="nj" width="300px" height="300px">
+                <h4 class="name">NICARAGUA, Jinotega</h4>
+                <h4 class="name1">Bourbon rojo</h4>
+            </div>
+            <br>
+            <div class="product-card">
+                <img src="../pblest/images/NICARAGUAma.jpg" alt="nj" width="300px" height="300px">
+                <h4 class="name">NICARAGUA, Matagalpa</h4>
+                <h4 class="name1">Bourbon natural</h4>
+            </div>
+            <br>
+            <div class="product-card">
+                <img src="../pblest/images/PERUama.jpg" alt="pa" width="300px" height="300px">
+                <h4 class="name">PERU, Amazonas</h4>
+                <h4 class="name1">Maragogype lavado</h4>   
+            </div>
 
-        </div>
-        <br>
-        <div class="product-card">
-            <img src="../pblest/images/COLOMBIAca.jpg" alt="cca" width="300px" height="300px">
-            <h4 class="name">COLOMBIA, Cartago</h4>
-            <h4 class="name1">Bourbon rosado</h4>
-            
-        </div>
-        <br>
-        <div class="product-card">
-            <img src="../pblest/images/ETIOPIAsh.jpg" alt="esh" width="300px" height="300px">
-            <h4 class="name">ETIOPIA, Shara</h4>
-            <h4 class="name1">Variedades reliquia lavado</h4>
-            
-        </div>
-        <br>
-        <div class="product-card">
-            <img src="../pblest/images/ETIOPIAur.jpg" alt="eur" width="300px" height="300px">
-            <h4 class="name">ETIOPIA, Uraga</h4>
-            <h4 class="name1">Adado lavado</h4>
-            
-        </div>
-        <br>
-        <div class="product-card">
-            <img src="../pblest/images/GUATEMALAhu.jpg" alt="gh" width="300px" height="300px">
-            <h4 class="name">GUATEMALA, huehuetenango</h4>
-            <h4 class="name1">Bourbon honey</h4>
-
-        </div>
-        <br>
-        <div class="product-card">
-            <img src="../pblest/images/KENIAki.jpg" alt="kk" width="300px" height="300px">
-            <h4 class="name">KENIA, Kirinyaga</h4>
-            <h4 class="name1">Lavado</h4>
-            
-        </div>
-        <br>
-        <div class="product-card">
-            <img src="../pblest/images/NICARAGUAji.jpg" alt="nj" width="300px" height="300px">
-            <h4 class="name">NICARAGUA, Jinotega</h4>
-            <h4 class="name1">Bourbon rojo</h4>
-        
-        </div>
-        <br>
-        <div class="product-card">
-            <img src="../pblest/images/NICARAGUAma.jpg" alt="nj" width="300px" height="300px">
-            <h4 class="name">NICARAGUA, Matagalpa</h4>
-            <h4 class="name1">Bourbon natural</h4>
-        
-        </div>
-        <br>
-        <div class="product-card">
-            <img src="../pblest/images/PERUama.jpg" alt="pa" width="300px" height="300px">
-            <h4 class="name">PERU, Amazonas</h4>
-            <h4 class="name1">Maragogype lavado</h4>
-            
-        </div>
+            <div class="producto">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../pblest/images/PERUama.jpg" alt="pa" width="300px" height="300px">
+                        <span class="card-title">PERU, AMAZONAS.</span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Es un lote jugoso, con cuerpo cremoso y notas cítricas que recuerdan al té de limón. Dulce, con un retrogusto limpio y acidez vibrante, expresa su mejor versión en métodos de filtro.</p>
+                        <p>$2100</p>
+                    </div>
+                </div>   
+            </div>
     </main>
 
 
-    <footer class="flex-row">
-        <div>
+<footer class="flex-row">
+    <div>
         <a href="https://www.instagram.com/cafepuertoblest/"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <div>
+    </div>
+    <div>
         <a href="mailito:ventas@cafepuertoblest.com">ventas@cafepuertoblest.com</a>
-        </div>
-    </footer>
+    </div>
+</footer>
 
 <script src="../js/stock.js"></script>
 <script src="../js/carrito.js"></script>
