@@ -8,6 +8,7 @@
 <!--LINK ICONOS-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,-25" />
 <script src="https://kit.fontawesome.com/dd950ff17a.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!--LINK ARCHIVO CSS-->
 <link rel="stylesheet" href="../pblest/style.css">
@@ -34,103 +35,147 @@
         </nav>
     </header>
 
+
+    <div class="seleccion">
+        <select id="selecCafe">
+            <option value="all">Todos</option>
+            <option value="L">$2300 - $2500</option>
+            <option value="M">$2000 - $2200</option>
+            <option value="S">$1600 - $1800</option>
+        </select>
+    </div>
+
+
     <main id="contenedor-productos">
-        <div class="grid-container">
+        <div>
             <h3 class="title-products">VIVI TU PROPIA EXPERIENCIA SENSORIAL.</h3>
             <br>
             <br>
-            <div class="seleccion">
-                <select id="selecCafe">
-                    <option value="all">Todos</option>
-                    <option value="L">$2300 - $2500</option>
-                    <option value="M">$2000 - $2200</option>
-                    <option value="S">$1600 - $1800</option>
-                </select>
-            </div>
-            <br>
-            <div class="modal-contenedor">
-                <div class="modal-carrito">
-                    <h3>Carrito</h3>
-                    <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-                    <div id="carrito-contenedor">
-                         <!-- <div class="productoEnCarrito">
-                            <p>Buzo 1</p>
-                            <p>Precio: $1200</p>
-                            <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-                        </div>   -->
-                    </div>
-                    <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
-                    <div id="terminar" style="display: flex; justify-content: flex-end;"></div>
-                </div>
-            </div>
             <br>
             <br>
-            <div class="product-card">
-            <div class="product-info">
-                <img src="../pblest/images/BLEND.jpg" alt="blend" width="300px" height="300px">
-                <h4 class="name">ALTURA 1 - Blend</h4>
-                <h4 class="name1">Blend de la casa</h4>
-            </div>
-            <br>
-            <div class="product-card">
-                <img src="../pblest/images/COLOMBIAsl.jpg" alt="csl" width="300px" height="300px">
-                <h4 class="name">COLOMBIA, San Lorenzo</h4>
-                <h4 class="name1">Gesha lavado </h4>
-            </div>
-            <br>
-            <div class="product-card">
-                <img src="../pblest/images/COLOMBIAca.jpg" alt="cca" width="300px" height="300px">
-                <h4 class="name">COLOMBIA, Cartago</h4>
-                <h4 class="name1">Bourbon rosado</h4>
-            </div>
-            <br>
-            <div class="product-card">
-                <img src="../pblest/images/ETIOPIAsh.jpg" alt="esh" width="300px" height="300px">
-                <h4 class="name">ETIOPIA, Shara</h4>
-                <h4 class="name1">Variedades reliquia lavado</h4>   
-            </div>
-            <br>
-            <div class="product-card">
-                <img src="../pblest/images/ETIOPIAur.jpg" alt="eur" width="300px" height="300px">
-                <h4 class="name">ETIOPIA, Uraga</h4>
-                <h4 class="name1">Adado lavado</h4> 
-            </div>
-            <br>
-            <div class="product-card">
-                <img src="../pblest/images/GUATEMALAhu.jpg" alt="gh" width="300px" height="300px">
-                <h4 class="name">GUATEMALA, huehuetenango</h4>
-                <h4 class="name1">Bourbon honey</h4>
-            </div>
-            <br>
-            <div class="product-card">
-                <img src="../pblest/images/KENIAki.jpg" alt="kk" width="300px" height="300px">
-                <h4 class="name">KENIA, Kirinyaga</h4>
-                <h4 class="name1">Lavado</h4>   
-            </div>
-            <br>
-            <div class="product-card">
-                <img src="../pblest/images/NICARAGUAji.jpg" alt="nj" width="300px" height="300px">
-                <h4 class="name">NICARAGUA, Jinotega</h4>
-                <h4 class="name1">Bourbon rojo</h4>
-            </div>
-            <br>
-            <div class="product-card">
-                <img src="../pblest/images/NICARAGUAma.jpg" alt="nj" width="300px" height="300px">
-                <h4 class="name">NICARAGUA, Matagalpa</h4>
-                <h4 class="name1">Bourbon natural</h4>
-            </div>
-            <br>
-            <div class="product-card">
-                <img src="../pblest/images/PERUama.jpg" alt="pa" width="300px" height="300px">
-                <h4 class="name">PERU, Amazonas</h4>
-                <h4 class="name1">Maragogype lavado</h4>   
-            </div>
-
             <div class="producto">
                 <div class="card">
                     <div class="card-image">
+                        <img src="../pblest/images/BLEND.jpg" alt="blend" width="300px" height="300px">
+                        <span class="card-title"><h4 class="name">ALTURA 1, BLEND.</h4></span>
+                        <span><h4 class="name1">Blend de la casa</h4></span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Se caracteriza por su dulzor y su prolongado retrogusto. Un café con un perfil de sabor redondo y con acidez muy balanceada. Complejo y con cuerpo.</p>
+                        <p>$2400</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../pblest/images/COLOMBIAsl.jpg" alt="csl" width="300px" height="300px">
+                        <span class="card-title"><h4 class="name">COLOMBIA, SAN LORENZO.</h4></span>
+                        <span><h4 class="name1">Gesha lavado</h4></span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Un café delicado, floral y sumamente complejo que siempre invita a una taza más.</p>
+                        <p>$2200</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../pblest/images/COLOMBIAsl.jpg" alt="csl" width="300px" height="300px">
+                        <span class="card-title"><h4 class="name">COLOMBIA, CARTAGO.</h4></span>
+                        <span><h4 class="name1">Bourbon rosado</h4></span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Un hallazgo raro y codiciado, un híbrido que se destaca en todo sentido desde el llamativo color rosa de sus frutos hasta su sabor notablemente dulce.</p>
+                        <p>$1800</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../pblest/images/ETIOPIAsh.jpg" alt="esh" width="300px" height="300px">
+                        <span class="card-title"><h4 class="name">ETIOPIA, SHARA.</h4></span>
+                        <span><h4 class="name1">Variedades reliquia lavado</h4></span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Tan exótico como su origen, es un blend de varietales reliquia locales. Con cuerpo sedoso y acidez vibrante, se destaca por sus delicadas notas cítricas que recuerdan a la lima y al quinoto, también a los frutos amarillos.</p>
+                        <p>$2200</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../pblest/images/ETIOPIAur.jpg" alt="eur" width="300px" height="300px">
+                        <span class="card-title"><h4 class="name">ETIOPIA, URAGA.</h4></span>
+                        <span><h4 class="name1">Adado lavado</h4></span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Un café con atributos balanceados que abrazan el paladar. Su retrogusto jugoso, acidez vibrante y cuerpo sedoso definen una experiencia completa y agradable.</p>
+                        <p>$2300</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../pblest/images/GUATEMALAhu.jpg" alt="gh" width="300px" height="300px">
+                        <span class="card-title"><h4 class="name">GUATEMALA, HUEHUETENANGO.</h4></span>
+                        <span><h4 class="name1">Bourbon honey</h4></span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Es un cafe particularmente tostado, con lotes de avellanas, toffee y caramelo. Una de las tazas más sabrosas del mundo y no por nada te decimos que te roba una sonrisa.</p>
+                        <p>$1800</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../pblest/images/KENIAki.jpg" alt="kk" width="300px" height="300px">
+                        <span class="card-title"><h4 class="name">KENIA, KIRINYAGA.</h4></span>
+                        <span><h4 class="name1">Lavado</h4></span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Un café particularmente mantecoso en fragancia, en boca presenta notas a manzana roja, mandarina, caramelo y miel de maple, con un retrogusto jugoso y prolongado. Se destaca por su acidez crujiente, vibrante y su cuerpo almibarado y redondo.</p>
+                        <p>$2200</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../pblest/images/NICARAGUAji.jpg" alt="nj" width="300px" height="300px">
+                        <span class="card-title"><h4 class="name">NICARAGUA, JINOTEGA.</h4></span>
+                        <span><h4 class="name1">Bourbon rojo</h4></span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Es un café que cautiva por su complejidad. Dulce y cremoso, con marcadas notas a frutos rojos. Una sensaciòn aromatica floral que lo convierte en ùnico.</p>
+                        <p>$1600</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../pblest/images/NICARAGUAma.jpg" alt="nm" width="300px" height="300px">
+                        <span class="card-title"><h4 class="name">NICARAGUA, MATAGALPA.</h4></span>
+                        <span><h4 class="name1">Bourbon natural</h4></span>
+                        <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>Un café natural, exótico y complejo. Intensidad en fragancias a avellanas y aroma a frutos rojos. En frío presenta un marcado aroma a rosa mosqueta. Su sabor fresco y frutal, fondo sutil a lima y posgusto a menta y peperina.</p>
+                        <p>$1800</p>
+                    </div>    
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-image">
                         <img src="../pblest/images/PERUama.jpg" alt="pa" width="300px" height="300px">
-                        <span class="card-title">PERU, AMAZONAS.</span>
+                        <span class="card-title"><h4 class="name">PERU - AMAZONAS.</h4></span>
+                        <span><h4 class="name1">Maragogype lavado</h4></span>
                         <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
                     </div>
                     <div class="card-content">
@@ -140,6 +185,24 @@
                 </div>   
             </div>
     </main>
+
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                <div class="productoEnCarrito">
+                    <p>KENIA, KIRINYAGA.</p>
+                    <p>Precio: $2200</p>
+                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div>   
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <div id="terminar" style="display: flex; justify-content: flex-end;"></div>
+        </div>
+    </div>
+
 
 
 <footer class="flex-row">

@@ -15,15 +15,15 @@ const buscador = document.getElementById('search')
 
 
 
+
 selecCafe.addEventListener('change',()=>{
     console.log(selecCafe.value)
-    if(selecTalles.value == 'all'){
+    if(selecCafe.value == 'all'){
         mostrarProductos(stockProductos)
     }else{
         mostrarProductos(stockProductos.filter(elemento=> elemento.cafe == selecCafe.value))
     }
 })
-
 
 buscador.addEventListener('input',(e)=>{
     console.log(e.target.value);
@@ -47,7 +47,6 @@ function mostrarProductos(array){
                             </div>
                             <div class="card-content">
                                 <p>${el.desc}</p>
-                                <p>Talle: ${el.talle}</p>
                                 <p> $${el.precio}</p>
                             </div>
                         </div>`
@@ -81,6 +80,10 @@ contenedorModal.addEventListener('click', ()=>{
     carritoCerrar.click()
 })
 
+
+
+
+
 function agregarAlCarrito(id) {
 let productoAgregar = stockProductos.find(item => item.id === id)
     console.log(productoAgregar)
@@ -90,7 +93,6 @@ let productoAgregar = stockProductos.find(item => item.id === id)
 
     localStorage.setItem('carrito', JSON.stringify(carritoDeCompras))
 }
-
 
 
 function mostrarCarrito(productoAgregar) {
@@ -108,8 +110,6 @@ function mostrarCarrito(productoAgregar) {
         carritoDeCompras = carritoDeCompras.filter(ele => ele.id !== productoAgregar.id)
         actualizarCarrito()
         localStorage.setItem('carrito', JSON.stringify(carritoDeCompras))
-    })
-
 }
 
 
@@ -131,3 +131,5 @@ let recuperarLS = JSON.parse(localStorage.getItem('carrito'))
 }
 
 recuperar()
+
+}
