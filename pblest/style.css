@@ -143,23 +143,6 @@ p {
     font-size: 18.5px;
 }
 
-.name {
-    font-family: var(--font-tertiary);
-    font-weight: lighter;
-    font-size: 25px;
-}
-
-.name1 {
-    font-family: var(--font-tertiary);
-    font-weight: lighter;
-    font-size: 20px;
-}
-
-.name2 {
-    font-family: var(--font-secondary);
-    font-weight: lighter;
-    font-size: 18.5px;
-}
 
 #boton-carrito {
     border: none;
@@ -180,11 +163,41 @@ p {
     outline: none;
 }
 
+.card-title {
+    font-family: var(--font-tertiary);
+    font-weight: lighter;
+    font-size: 25px;
+}
 
+.name1 {
+    font-family: var(--font-tertiary);
+    font-weight: lighter;
+    font-size: 20px;
+}
 
+.card-text {
+    font-family: var(--font-secondary);
+    font-weight: lighter;
+    font-size: 18.5px;
+}
 
+.text-primary {
+    font-family: var(--font-primary);
+    font-weight: lighter;
+    font-size: 18px;
+}
 
+.btn{
+    font-family: var(--font-secondary);
+    font-weight: lighter;
+    font-size: 16.5px;
+}
 
+.h4 {
+    font-family: var(--font-secondary);
+    font-weight: lighter;
+    font-size: 22.5px;
+}
 
 
 
