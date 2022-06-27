@@ -150,6 +150,19 @@
 
 
 
+
+
+
+
+
+
+
+function myFunction() {
+  alert("Te contamos nuestra historia !");
+}
+
+
+
 const nombre = document.getElementById("firstName");
 const email = document.getElementById("email");
 const monto = document.getElementById("amount");
@@ -231,9 +244,5 @@ const finalizarCompra = (total) => {
 })()
 
 
-
-function myFunction() {
-  alert("Te contamos nuestra historia !");
-}
 
 

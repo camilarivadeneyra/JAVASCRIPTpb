@@ -15,86 +15,25 @@
     <title>PUERTO BLEST / tostadores de café.</title>
 </head>
 <body>
-    <main>
-        <div class="py-5 text-center">
-            <a href="../index.html"><img class="d-block mx-auto mb-4" src="../pblest/images/PuertoBlest.png" alt="logo" width="150" height="150"></a>
-            <h2>FINALIZA TU COMPRA</h2>
-            <p class="lead">SIMULADOR DE CUOTAS.</p>
-        </div>
-    
-        <div class="row g-5">
-            <div class="col-md-5 col-lg-4 order-md-last">
-                <h4 class="d-flex justify-content-between align-items-center mb-3"><span class="text-primary">TUS CUOTAS</span></h4>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">IMPORTE</h6>
-                            <small class="text-muted">Total de su compra.</small>
-            </div>
-            <span class="text-muted" id="finalAmount">$ 0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">CUOTAS</h6>
-                            <small class="text-muted">Cantidad de cuotas.</small>
-                        </div>
-            <span class="text-muted" id="finalFees">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between bg-light">
-                        <div class="text-success">
-                            <h6 class="my-0">INTERESES</h6>
-                        </div>
-            <span class="text-success" id="interests">$ 0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <span>TOTAL A PAGAR CON INTERESES.</span>
-            <strong id="totalAmount">$ 0</strong>
-                    </li>
-                </ul>
-        </div>
+    <header>
+        <a href="../index.html"><img class="d-block mx-auto mb-4" src="../pblest/images/PuertoBlest.png" alt="logo" width="150" height="150"></a>
+    </header>
 
-        <div class="col-md-7 col-lg-8">
-            <h4 class="mb-3">INGRESE SUS DATOS.</h4>
-            <form class="needs-validation" id="form" novalidate>
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <label for="firstName" class="form-label">NOMBRE</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                            <div class="invalid-feedback">Por favor, ingrese un nombre valido.</div>
-                    </div>
-    
-                    <div class="col-12">
-                        <label for="email" class="form-label">E-MAIL<span class="text-muted"></span></label>
-                        <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                            <div class="invalid-feedback">Por favor, ingrese su mail para mantenernos en contacto.</div>
-                    </div>
-    
-                    <div class="col-12">
-                        <label for="amount" class="form-label">SU IMPORTE ES</label>
-                        <input type="number" class="form-control" id="amount" placeholder="50000" required>
-                            <div class="invalid-feedback">Por favor, ingrese el importe.</div>
-                    </div>
-    
-                    <div class="col-12">
-                        <label for="fees" class="form-label">CUANTAS CUOTAS?</label>
-                        <input type="number" class="form-control" id="fees" placeholder="6" required>
-                            <div class="invalid-feedback">Por favor, ingrese la cantidad de cuotas</div>
-                    </div>
-    
-        <hr class="my-4">
-    
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="save-info">
-                    <label class="form-check-label" for="save-info">GUARDA TU INFORMACION PARA LA PROXIMA VISITA</label>
-                </div>
-    
-        <hr class="my-4">
-    
-        <input class="w-100 btn btn-primary btn-lg" id="simulate" type="submit" value="SIMULAR CUOTAS">
-            </form>
-            </div>
-        </div>
+    <main>
+        <h4>CARRITO DE COMPRAS.</h4>
+        
     </main>
+
+    <footer class="flex-row">
+        <div>
+        <a href="https://www.instagram.com/cafepuertoblest/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div>
+        <a href="mailito:ventas@cafepuertoblest.com">ventas@cafepuertoblest.com</a>
+        </div>
+    </footer>
+
+
 
 <script src="../js/stock.js"></script>
 <script src="../js/carrito.js"></script>    
