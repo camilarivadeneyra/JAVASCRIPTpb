@@ -150,19 +150,6 @@
 
 
 
-
-
-
-
-
-
-
-function myFunction() {
-  alert("Te contamos nuestra historia !");
-}
-
-
-
 const nombre = document.getElementById("firstName");
 const email = document.getElementById("email");
 const monto = document.getElementById("amount");
@@ -246,3 +233,31 @@ const finalizarCompra = (total) => {
 
 
 
+
+
+
+
+/*SWEET ALERT */
+
+function myFunction() {
+  swal.fire ({
+    icon: 'success',
+    title: 'BIENVENIDO!',
+    text: 'Te contamos nuestra historia',
+    confirmButtonText: 'Vamos',
+    duration: '10000',
+    destinatation: './pages/img.html'
+  })
+}
+
+
+/* TOASTIFY */
+
+const btn = document.getElementById ("btn-añadir");
+
+btn.addEventListener ("añadir", () => {
+  Toastify ({
+    text: "Producto agregado",
+    duration: 3000
+  }).showToast();
+})
