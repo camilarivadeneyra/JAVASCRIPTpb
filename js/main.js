@@ -150,85 +150,85 @@
 
 
 
-const nombre = document.getElementById("firstName");
-const email = document.getElementById("email");
-const monto = document.getElementById("amount");
-const cuotas = document.getElementById("fees");
+// const nombre = document.getElementById("firstName");
+// const email = document.getElementById("email");
+// const monto = document.getElementById("amount");
+// const cuotas = document.getElementById("fees");
 
-const formulario = document.getElementById("form");
+// const formulario = document.getElementById("form");
 
-const montoFinal = document.getElementById("finalAmount");
-const cuotasFinales = document.getElementById("finalFees");
-const intereses = document.getElementById("interests");
-const totalADevolver = document.getElementById("totalAmount");
+// const montoFinal = document.getElementById("finalAmount");
+// const cuotasFinales = document.getElementById("finalFees");
+// const intereses = document.getElementById("interests");
+// const totalADevolver = document.getElementById("totalAmount");
 
-const tasa = 0.01; // 1%
+// const tasa = 0.01; // 1%
 
-formulario.addEventListener("submit", (e) => {
-  e.preventDefault();
+// formulario.addEventListener("submit", (e) => {
+//   e.preventDefault();
 
-  obtenerCuotaCompra();
+//   obtenerCuotaCompra();
 
-});
-
-
-const obtenerCuotaCompra = () => {
-  const cuotaCompra = tasa * monto.value / (1 - (1+tasa) ** - cuotas.value);
-  obtenerTotal(cuotaCompra);
-};
-
-const obtenerTotal = (cuotaCompra) => {
-  const total = Math.ceil(cuotaCompra) * cuotas.value;
-  finalizarCompra(total);
-}
-
-const finalizarCompra = (total) => {
-  montoFinal.textContent = monto.value;
-  cuotasFinales.textContent = cuotas.value;
-  intereses.textContent = total - monto.value;
-  totalADevolver.textContent = total;
-};
+// });
 
 
+// const obtenerCuotaCompra = () => {
+//   const cuotaCompra = tasa * monto.value / (1 - (1+tasa) ** - cuotas.value);
+//   obtenerTotal(cuotaCompra);
+// };
 
+// const obtenerTotal = (cuotaCompra) => {
+//   const total = Math.ceil(cuotaCompra) * cuotas.value;
+//   finalizarCompra(total);
+// }
 
-(() => {
-  'use strict'
-
-  const forms = document.querySelectorAll('.needs-validation')
-
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+// const finalizarCompra = (total) => {
+//   montoFinal.textContent = monto.value;
+//   cuotasFinales.textContent = cuotas.value;
+//   intereses.textContent = total - monto.value;
+//   totalADevolver.textContent = total;
+// };
 
 
 
-(() => {
-  'use strict'
+
+// (() => {
+//   'use strict'
+
+//   const forms = document.querySelectorAll('.needs-validation')
+
+//   Array.from(forms).forEach(form => {
+//     form.addEventListener('submit', event => {
+//       if (!form.checkValidity()) {
+//         event.preventDefault()
+//         event.stopPropagation()
+//       }
+
+//       form.classList.add('was-validated')
+//     }, false)
+//   })
+// })()
 
 
-  const forms = document.querySelectorAll('.needs-validation')
+
+// (() => {
+//   'use strict'
 
 
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
+//   const forms = document.querySelectorAll('.needs-validation')
 
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+
+//   Array.from(forms).forEach(form => {
+//     form.addEventListener('submit', event => {
+//       if (!form.checkValidity()) {
+//         event.preventDefault()
+//         event.stopPropagation()
+//       }
+
+//       form.classList.add('was-validated')
+//     }, false)
+//   })
+// })()
 
 
 
@@ -250,14 +250,3 @@ function myFunction() {
   })
 }
 
-
-/* TOASTIFY */
-
-const btn = document.getElementById ("btn-añadir");
-
-btn.addEventListener ("añadir", () => {
-  Toastify ({
-    text: "Producto agregado",
-    duration: 3000
-  }).showToast();
-})
