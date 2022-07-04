@@ -24,14 +24,11 @@
     <header>
         <nav class="navbar">
             <div>
-                <picture><a href="./index.html"><img src="./pblest/images/PuertoBlest.png" alt="logo" width="200" height="200"></a></picture>
-            </div>
-            <div>
-                <input id="search" class="search" type="search" name="Busqueda" placeholder="BUSCAR PRODUCTOS"> <span class="material-symbols-outlined">search</span>
+                <picture><a href="./index.html"><img src="./pblest/images/PuertoBlest.png" alt="logo" width="180" height="180"></a></picture>
             </div>
             <div class="products">
-                <ul><li><a href="./pages/products.html">PRODUCTOS</a></li></ul>
-                <span class="material-symbols-outlined">account_circle</span>
+                <ul><a href="./pages/products.html">PRODUCTOS.</a></ul>
+                <a href="./pages/user.html"></a><span class="material-symbols-outlined">account_circle</span>
                 <button id="boton-carrito"><a href="./pages/cart.html"><i class="fas fa-shopping-cart"><span id="contadorCarrito">0</i></a></i></button>
             </div>
         </nav>
@@ -39,15 +36,43 @@
 
     <main>
         <br>
-        <br>
-        <br>
-        <div class="grid-container">
-            <img src="./pblest/images/GRANOS.jpeg" width="300" height="300" alt="Workplace" usemap="#workmap">
-            <img src="./pblest/images/MOLIENDA.jpeg" width="300" height="300" alt="Workplace" usemap="#workmap">
-            <img src="./pblest/images/CAFE.jpeg" width="300" height="300" alt="Workplace" usemap="#workmap">
-            <img src="./pblest/images/VARIOS.jpg" width="300" height="300" alt="Workplace" usemap="#workmap">
-        <map name="workmap"><area shape="default" alt="Coffee" href="./pages/img.html" onclick="myFunction()"></map>
+        <div class="portada">
+            <img src="./pblest/images/portada.jpg" alt="" width="500px" height="200px">
         </div>
+        <br>
+        <br>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="./pblest/images/GRANOS.jpeg" style="width:100%">
+                <div class="text">SOMOS UN MICROTOSTADERO DE CAFE</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="./pblest/images/MOLIENDA.jpeg" style="width:100%">
+                <div class="text">CONSTRUIMOS PERFILES DE TUESTE QUE EXALTAN SABORES Y AROMAS</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="./pblest/images/CAFE.jpeg" style="width:100%">
+                <div class="text">PARA QUE LOS GRANOS EXPRESEN SUS ATRIBUTOS UNICOS Y ESO SE REFLEJEEN CADA TAZA DE CAFE.</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="./pblest/images/VARIOS.jpg" style="width:100%">
+                <div class="text">QUEREMOS COMPARTIR NUESTRA PASION CON VOS!</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <br>
         <br>
         <div class="grid-container2">
             <section>
