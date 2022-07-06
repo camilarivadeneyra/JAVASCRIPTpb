@@ -251,21 +251,15 @@ function myFunction() {
 }
 
 
-
-
-
-
-
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
+
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -285,3 +279,29 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+
+
+// fetch ('https://jsonplaceholder.typicode.com/posts')
+//   .then( (res) => res.json() )
+//   .then( (res) => {
+//     console.log( data[0].title )
+//     console.log( data[0].body )
+//   });
+
+const lista = document.getElementById("contenedor-productos");
+
+fetch ('https://jsonplaceholder.typicode.com/posts')
+  .then( (res) => res.json() )
+  .then( (data) => {
+
+    data.forEach( post => {
+      const div = document.createElement("div");
+      div.innerHTML = ` <h4>${post.title}</h4>
+                        <p>${post.body}</p>
+                      `
+      contenedor.append(div)
+      
+    });
+});
