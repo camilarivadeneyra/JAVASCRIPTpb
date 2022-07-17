@@ -232,11 +232,6 @@
 
 
 
-
-
-
-
-
 /*SWEET ALERT */
 
 function myFunction() {
@@ -282,13 +277,12 @@ function showSlides(n) {
 
 
 
-
-// fetch ('https://jsonplaceholder.typicode.com/posts')
-//   .then( (res) => res.json() )
-//   .then( (res) => {
-//     console.log( data[0].title )
-//     console.log( data[0].body )
-//   });
+fetch ('https://jsonplaceholder.typicode.com/posts')
+  .then( (res) => res.json() )
+  .then( (res) => {
+    console.log( data[0].title )
+    console.log( data[0].body )
+  });
 
 const lista = document.getElementById("contenedor-productos");
 
@@ -305,6 +299,31 @@ fetch ('https://jsonplaceholder.typicode.com/posts')
       
     });
 });
+
+
+
+document.getElementById("search__item__button").addEventListener("click", function (e){
+
+  e.preventDefault();
+  let buscar = document.getElementById("search__item__input").value.toLowerCase();
+  const searchedItem = catalogo.filter((prod) => prod.nombre.toLowerCase().includes(buscar));
+  lista.innerHTML = "";
+
+  //Render busqueda
+  if(searchedItem.length > 0){
+  renderItemHome(searchedItem);
+  botonAgregar = document.querySelectorAll(".boton__agregar");
+  for (const boton of botonAgregar) {
+      boton.addEventListener("click", agregarItem);
+      boton.addEventListener("click", () =>{
+      toastAdd();
+  })} 
+  }else{lista.innerHTML = `<div class="alert__no__results">NO EXISTEN RESULTADOS PARA SU BUSQUEDA</div>`;
+  setTimeout(()=> {
+      lista.innerHTML= "";
+      fetchData();}, 2000);}
+});
+
 
 
 

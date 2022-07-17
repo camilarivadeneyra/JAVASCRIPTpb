@@ -3,7 +3,7 @@ const tbody = document.querySelector('.tbody')
 let carrito = []
 
 Clickbutton.forEach(btn => {
-    btn.addEventListener('click', addToCarritoItem)
+    btn.addEventListener('click', addToCarritoItem);
 })
 
 
@@ -132,15 +132,19 @@ function sumaCantidad(e){
 }
 
 
-// function addLocalStorage(){
-//     localStorage.setItem('carrito', JSON.stringify(carrito))
-// }
+function addLocalStorage(){
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+}
 
-// window.onload = function(){
-//     const storage = JSON.parse(localStorage.getItem('carrito'));
-//     if(storage){
-//     carrito = storage;
-//     renderCarrito()
-// }
-// }
+window.onload = function(){
+    const storage = JSON.parse(localStorage.getItem('carrito'));
+    if(storage){
+    carrito = storage;
+    renderCarrito()
+}
+}
+
+
+
+
 

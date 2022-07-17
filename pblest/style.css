@@ -74,11 +74,21 @@ a {
 }
 
 .search {
-    width: 82%;
-    height: 30px;
+    width: 55%;
+    height: 20%;
     background-color: white;
     text-align: left;
     font-size: 20px;
+    font-family: var(--font-tertiary);
+}
+
+.ok {
+    width: 35%;
+    height: 20%;
+    background-color:#b7b7b7;
+    border: #b7b7b7;
+    text-align: center;
+    font-size: 18px;
     font-family: var(--font-tertiary);
 }
 
@@ -107,9 +117,9 @@ footer {
 #boton-carrito {
     border: none;
     color: black;
-    font-size: 20px;
+    font-size: 18px;
     background-color: white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     transition: all 0.3s;
 }
 
@@ -130,10 +140,10 @@ footer {
 }
 
 .slideshow-container {
-    width: 1000px;
-    height: 650px;
+    width: 1300px;
+    height: 700px;
     position: relative;
-    padding: 15px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -213,17 +223,16 @@ footer {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 1em;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-around;
 }
 
 .grid-container2 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-gap: 1em;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -236,6 +245,13 @@ p {
     font-family: var(--font-secondary);
     font-weight: lighter;
     font-size: 18.5px;
+}
+
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1em;
+    padding-left: 35px;
 }
 
 .title-products {
@@ -278,7 +294,9 @@ p {
 .btn{
     font-family: var(--font-secondary);
     font-weight: lighter;
+    color: white;
     font-size: 16.5px;
+    background-color: black;
 }
 
 .h4 {
@@ -291,9 +309,14 @@ h2 {
     font-family: var(--font-primary) ;
 }
 
+.itemCartTotal {
+    font-family: var(--font-secondary);
+}
 
-
-
+.text-primary {
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 
