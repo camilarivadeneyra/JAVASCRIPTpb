@@ -88,6 +88,9 @@ a {
     font-size: 24px;
 }
 
+.h2 {
+    font-family: var(--font-primary);
+}
 
 footer {
     background-color: black;
@@ -127,9 +130,12 @@ footer {
 }
 
 .slideshow-container {
-    width: 500;
-    height: 200;
+    width: 1000px;
+    height: 650px;
     position: relative;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .mySlides {
@@ -281,7 +287,9 @@ p {
     font-size: 22.5px;
 }
 
-
+h2 {
+    font-family: var(--font-primary) ;
+}
 
 
 
