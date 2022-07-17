@@ -319,9 +319,37 @@ h2 {
 }
 
 
-
-
-
+/*Sweet Alert*/
+.boton__confirmar{
+    background-color:#33691E;
+    color: white;
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 5%;
+    margin: 10px;
+}
+.boton__confirmar:hover{
+    transition: 0.5s;
+    background-color: #8BC34A
+}
+.boton__cancelar{
+    background-color: rgb(223, 46, 46);
+    color: white;
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 5%;
+    margin: 10px;
+}
+.boton__cancelar:hover{
+    transition: 0.5s;
+    background-color: rgb(156, 29, 29)
+}
+/*Input Sweet Alert*/
+.input__swal{
+    width: 400px;
+    height: 30px;
+    margin: 5pxpx;
+}
 
 
 
