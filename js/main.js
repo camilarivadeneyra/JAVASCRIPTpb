@@ -231,72 +231,6 @@
 // })()
 
 
-/*LIBRARIES*/
-
-function swalCheckout () {
-  const swal = Swal.mixin({
-      customClass: {
-        confirmButton: 'boton__confirmar',
-        cancelButton: 'boton__cancelar'
-      },
-      buttonsStyling: false
-    })
-    
-    swal.fire({
-      title: 'Confirmar compra?',
-      html: 
-      `<form>
-      <input type="text" class="input__swal" name="nombre" placeholder="Nombre"><br>
-      <input type="text" class="input__swal" name="email" placeholder="Email"><br>
-      </form>`,
-      showCancelButton: true,
-      confirmButtonText: 'Comprar!',
-      cancelButtonText: 'Cancelar',
-      reverseButtons: true
-    }).then((result) => {
-      if (result.isConfirmed) {
-          swal.fire(
-          'Hecho!',
-          'Gracias por confiar en ILON OUTDOORS',
-          'success')
-      }
-    
-    
-  });
-  }
-  
-  function toastAdd () {
-      Toastify({
-          text: "Agregado al carrito",
-          duration: 1000,
-          gravity: "top", 
-          position: "right", 
-          style: {
-          background: "#33691E",
-          }
-        }).showToast();
-  }
-
-
-
-
-
-
-
-/*SWEET ALERT */
-
-function myFunction() {
-  swal.fire ({
-    icon: 'success',
-    title: 'BIENVENIDO!',
-    text: 'Te contamos nuestra historia',
-    confirmButtonText: 'Vamos',
-    duration: '10000',
-    destinatation: './pages/img.html'
-  })
-}
-
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -352,30 +286,37 @@ fetch ('https://jsonplaceholder.typicode.com/posts')
 });
 
 
+// document.getElementById("search__item__button").addEventListener("click", function (e){
 
-document.getElementById("search__item__button").addEventListener("click", function (e){
+//   e.preventDefault();
+//   let buscar = document.getElementById("search__item__input").value.toLowerCase();
+//   const searchedItem = catalogo.filter((prod) => prod.nombre.toLowerCase().includes(buscar));
+//   lista.innerHTML = "";
 
-  e.preventDefault();
-  let buscar = document.getElementById("search__item__input").value.toLowerCase();
-  const searchedItem = catalogo.filter((prod) => prod.nombre.toLowerCase().includes(buscar));
-  lista.innerHTML = "";
-
-  //Render busqueda
-  if(searchedItem.length > 0){
-  renderItemHome(searchedItem);
-  botonAgregar = document.querySelectorAll(".boton__agregar");
-  for (const boton of botonAgregar) {
-      boton.addEventListener("click", agregarItem);
-      boton.addEventListener("click", () =>{
-      toastAdd();
-  })} 
-  }else{lista.innerHTML = `<div class="alert__no__results">NO EXISTEN RESULTADOS PARA SU BUSQUEDA</div>`;
-  setTimeout(()=> {
-      lista.innerHTML= "";
-      fetchData();}, 2000);}
-});
+//   if(searchedItem.length > 0){
+//   renderItemHome(searchedItem);
+//   botonAgregar = document.querySelectorAll(".boton__agregar");
+//   for (const boton of botonAgregar) {
+//       boton.addEventListener("click", agregarItem);
+//       boton.addEventListener("click", () =>{
+//       toastAdd();
+//   })} 
+//   }else{lista.innerHTML = `<div class="alert__no__results">NO EXISTEN RESULTADOS PARA SU BUSQUEDA</div>`;
+//   setTimeout(()=> {
+//       lista.innerHTML= "";
+//       fetchData();}, 2000);}
+// });
 
 
+const img = document.getElementById ("on-click");
 
+img.addEventListener("click", () => {
+  swal({
+    title: "BIENVENIDO!",
+    text: "Te contamos nuestra historia!",
+    icon: "succes",
+    confirm: "Vamos!"
+  })
+})
 
 
